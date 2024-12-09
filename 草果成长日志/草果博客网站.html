@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .card {
+            width: 300px;
+            height: 350px;
+            padding: 0;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: 50px 0 50px 0;
+        }
+
+        .card * {
+            transition: all 0.3s ease;
+        }
+
+        .card img {
+            margin: 0;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 12px 12px 150px;
+            line-height: 32px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .card .focus-content {
+            display: block;
+            padding: 8px 12px;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .card:hover img {
+            margin-top: -300px;
+        }
+
+        .card:hover h3 {
+            padding: 8px 12px 0;
+        }
+
+        video{
+            width: 500px;
+            height: 650px;
+            margin: 0 0 0 150px;
+        }
+
+        button{
+            width: 70px;
+            height: 30px;
+        }
+
+        /* 以下为导航栏style */
+        .header {
+            height: 100px;
+            line-height: 120px;
+            position: sticky;
+            font-size: 16px;
+            background-color: rgb(230, 229, 229);
+        }
+
+        .header .logo,
+        .header .welcome-text,
+        .header .nav {
+            position: absolute;
+            top: 0;
+        }
+
+        .header .logo {
+            left: 65px;
+        }
+
+        .header .logo span {
+            display: none;
+        }
+
+        .header .nav {
+            left: 250px;
+        }
+
+        .header .nav a {
+            color: #3f2863;
+            margin: 0 40px;
+        }
+
+        .header .nav a.active {
+            color: #ff7f21;
+        }
+
+        .header .welcome-text {
+            right: 50px;
+        }
+
+        .header .header-down-nav {
+            display: none;
+        }
+
+        /* 以下为测试style */
+        @media screen and (max-width: 1200px) {
+            .whisper-content {
+                padding: 0 0 60px 0;
+            }
+        }
+
+        .whisper-content .cont {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .whisper-content .item-box {
+            background: #f9f9f9;
+            margin-bottom: 20px;
+        }
+
+        blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .whisper-content .cont .item-box .item {
+            padding: 50px 46px 20px 54px;
+        }
+
+        .whisper-content .cont .whisper-list .whisper-title {
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+
+        .whisper-content .whisper-list .text-cont {
+            line-height: 24px;
+            margin-bottom: 28px;
+        }
+
+        .whisper-content .whisper-list .img-box {
+            overflow: hidden;
+        }
+
+        .whisper-content .cont .whisper-list .whisper-title i {
+            position: relative;
+            top: 1px;
+            margin-right: 5px;
+        }
+
+        .layui-icon {
+            font-family: layui-icon !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .whisper-content .cont .whisper-list .whisper-title span.hour {
+            margin-right: 20px;
+        }
+
+        .whisper-content .cont .whisper-list .whisper-title span {
+            color: #ff7f21;
+        }
+
+        .whisper-content .cont .whisper-list .whisper-title span {
+            color: #ff7f21;
+        }
+
+/* .img-box img{
+    width: 260px;
+    height: 130px;
+} */
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu-btn">
+            <div class="menu"></div>
+        </div>
+        <h1 class="logo">
+            <a href="index.html">
+        <span>MYBLOG</span>
+        <img src="./logo.png">
+      </a>
+        </h1>
+        <div class="nav">
+            <a href="#" class="active">首页</a>
+            <a href="#">相册</a>
+            <a href="#">留言</a>
+        </div>
+        <p class="welcome-text">
+            欢迎来到<span class="name">草果</span>的博客~
+        </p>
+    </div>
+    <section>
+        <div class="card">
+            <img src="./草果动漫头像.jpg" />
+            <h3>我的介绍↓</h3>
+            <div class="focus-content">
+                <p>
+                    我叫草果，是一只英国短毛猫。我的名字是姐姐帮我取的，之所以叫草果是因为我的毛色
+                    类似龟苓膏，于是姐姐便帮我取了“草果”这个名字。我比较胆小，有点害怕陌生人，但我
+                    很喜欢我的家人。我最喜欢与家人们一起玩耍，哥哥姐姐也给我买了很多玩具，玩累了我会
+                    在爸爸身边睡觉。我觉得我很幸福~<br />
+                </p>
+            </div>
+        </div>
+    </section> 
+    
+    <div class="content whisper-content">
+        <div class="cont">
+            <div class="whisper-list">
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">22:49</span><span class="date">2023/7/8</span>
+                        </div>
+                        <p class="text-cont">
+                            今天是我到家的第一天~
+                        </p>
+                        <div class="img-box">
+                            <img src="./第一天(1).jpg">
+                            <img src="./第一天(2).jpg">
+                            <img src="./第一天(3).jpg">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">12:25</span><span class="date">2023/8/08</span>
+                        </div>
+                        <p class="text-cont">
+                            姐姐给我做的表情包...
+                        </p>
+                        <div class="img-box">
+                            <img src="./第二天(1).jpg">
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">13:08</span><span class="date">2023/8/18</span>
+                        </div>
+                        <p class="text-cont">
+                            被哥哥抱起来了
+                        </p>
+                        <div class="img-box">
+                            <img src="./第三天(1).jpg">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">12:27</span><span class="date">2023/8/20</span>
+                        </div>
+                        <p class="text-cont">
+                            学会站立了hhh
+                        </p>
+                        <div class="img-box">
+                            <img src="./第四天(1).jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">20:09</span><span class="date">2023/10/12</span>
+                        </div>
+                        <p class="text-cont">
+                            瘫......
+                        </p>
+                        <div class="img-box">
+                            <img src="./第五天(1).jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">13:41</span><span class="date">2024/2/10</span>
+                        </div>
+                        <p class="text-cont">
+                            穿新衣服咯
+                        </p>
+                        <div class="img-box">
+                            <img src="./第六天(1).jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">15:23</span><span class="date">2024/2/22</span>
+                        </div>
+                        <p class="text-cont">
+                            终于还是被绝育了T T
+                        </p>
+                        <div class="img-box">
+                            <img src="./第七天(1).jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-box">
+                    <div class="item">
+                        <div class="whisper-title">
+                            <i class="layui-icon layui-icon-date"></i><span class="hour">13:32</span><span class="date">2023/3/18</span>
+                        </div>
+                        <p class="text-cont">
+                            今天来顶楼玩耍~
+                        </p>
+                        <div class="img-box">
+                            <img src="./第八天(1).jpg">
+                            <img src="./第八天(2).jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
